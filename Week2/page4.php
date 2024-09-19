@@ -15,6 +15,8 @@ session_start();
     <div class="container">
 
         <?php
+        session_unset();
+
         session_destroy();
         
         echo "<p>Session Destroyed";
@@ -29,6 +31,8 @@ session_start();
         <p><a href="page1.php">LOGIN</a></p>
 
     </div>
+
+    <?php include 'session.php';?>
 
     <!-- Include Bootstrap JS (optional) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

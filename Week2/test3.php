@@ -24,6 +24,7 @@ session_start();
             echo "User is logged in.";
         } else {
             echo "User is not logged in.";
+            die("not logged in");
         }
         ?>
 

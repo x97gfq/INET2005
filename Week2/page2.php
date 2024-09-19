@@ -1,7 +1,6 @@
 <?php
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,24 +13,61 @@ session_start();
 <body>
     <div class="container">
 
-        <?php
+    <?php
         $username = $_POST["username"];
-        $password = $_POST["password"];
+        $password = $_POST["password"]; //password123
 
-        //echo $username . ":" . $password;
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        if ($username == "Jamie" && $password == "asdf") {
-            $_SESSION["logged_in"] = true;
-            $_SESSION["username"] = $username;
+        $db_servername = "db";
+        $db_username = "root";
+        $db_password = "rootpassword";
+        $db_name = "People";
+
+        // Create connection
+        $conn = new mysqli($db_servername, $db_username, $db_password, $d_bname);
+
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // Prepare the SQL statement
+        $stmt = $conn->prepare("SELECT `id`, `lastname`, `firstname`, `email`, `password` FROM People.Users
+             WHERE email = ? AND password = ?");
+
+        // Bind parameters
+        $stmt->bind_param("ss", $username, $hashed_password);
+
+        // Execute the statement
+        $stmt->execute();
+
+        // Get the result
+        $result = $stmt->get_result();
+
+        // Fetch data
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $_SESSION["logged_in"] = true;
+                $_SESSION["id"] = $row["id"];
+                $_SESSION["lastname"] = $row["lastname"];
+                $_SESSION["firstname"] = $row["firstname"];
+                $_SESSION["email"] = $row["email"];
+            }
             echo "valid login";
             echo "<br/><a href=\"page3.php\">go to page 3</a>";
         } else {
             echo "invalid login";
             echo "<br/><a href=\"page1.php\">go back to login</a>";
         }
+
+        // Close the statement
+        $stmt->close();
         ?>
 
     </div>
+
+    <?php include 'session.php';?>
 
     <!-- Include Bootstrap JS (optional) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

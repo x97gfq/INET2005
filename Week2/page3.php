@@ -1,6 +1,11 @@
 <?php
 session_start();
+
+if (!$_SESSION["logged_in"]) {
+    die("You're not logged in.");
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,6 +34,8 @@ session_start();
         <a href="page4.php">LOGOUT</a>
 
     </div>
+
+    <?php include 'session.php';?>
 
     <!-- Include Bootstrap JS (optional) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

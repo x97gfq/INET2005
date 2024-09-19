@@ -27,7 +27,6 @@ session_start();
 
             <input type="submit"/>
         </form>
-        <p>login with Jamie / asdf</p>
         <?php include 'session.php';?>
 
         </div>
