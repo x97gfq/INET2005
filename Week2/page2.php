@@ -17,7 +17,7 @@ session_start();
         $username = $_POST["username"];
         $password = $_POST["password"]; //password123
 
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        //$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         $db_servername = "db";
         $db_username = "root";
@@ -37,7 +37,7 @@ session_start();
              WHERE email = ? AND password = ?");
 
         // Bind parameters
-        $stmt->bind_param("ss", $username, $hashed_password);
+        $stmt->bind_param("ss", $username, $password);
 
         // Execute the statement
         $stmt->execute();
