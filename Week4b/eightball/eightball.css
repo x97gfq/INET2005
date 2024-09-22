@@ -1,0 +1,16 @@
+.eightball {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+}
+.eightball_answer {
+    width: 200px;
+    height: 100px;
+    margin: auto;
+    background-color: grey;
+    color: green;
+    font-size: 2em;
+}
