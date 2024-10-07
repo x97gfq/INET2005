@@ -12,6 +12,7 @@ function rollUntilTie() {
         die1 = rollDie();
         die2 = rollDie();
         rollCount++;
+        
         console.log(`Roll ${rollCount}: Die 1 = ${die1}, Die 2 = ${die2}`);
     } while (die1 !== die2);
 

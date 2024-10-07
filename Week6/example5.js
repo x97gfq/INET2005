@@ -32,7 +32,9 @@ rl.question('Choose rock, paper, or scissors: ', (answer) => {
 
     console.log(`You chose: ${playerChoice}`);
     console.log(`Computer chose: ${computerChoice}`);
-    console.log(determineWinner(playerChoice, computerChoice));
+
+    var result = determineWinner(playerChoice, computerChoice);
+    console.log(result);
 
     rl.close();
 });

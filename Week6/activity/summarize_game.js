@@ -6,6 +6,7 @@ fs.readFile('hockey_game.json', 'utf8', (err, data) => {
         return;
     }
     const gameData = JSON.parse(data);
+
     const { date, teams, score, events } = gameData.game;
 
     console.log(`Game Summary: ${teams.home} vs ${teams.away}`);

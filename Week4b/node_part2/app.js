@@ -37,8 +37,6 @@ app.get('/', (req, res) => {
       return;
     }
 
-    //console.log('Query executed successfully:', results);
-
     // Generate HTML output
     let html = `
       <!DOCTYPE html>
@@ -66,15 +64,15 @@ app.get('/', (req, res) => {
             `;
 
             results.forEach(row => {
-            html += `
-                <tr>
-                <td>${row.first_name}</td>
-                <td>${row.last_name}</td>
-                <td>${row.player_number}</td>
-                <td>${row.team_name}</td>
-                <td>${row.location}</td>
-                </tr>
-            `;
+              html += `
+                  <tr>
+                  <td>${row.first_name}</td>
+                  <td>${row.last_name}</td>
+                  <td>${row.player_number}</td>
+                  <td>${row.team_name}</td>
+                  <td>${row.location}</td>
+                  </tr>
+              `;
             });
 
     html += `

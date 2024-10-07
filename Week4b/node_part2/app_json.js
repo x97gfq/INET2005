@@ -1,7 +1,10 @@
 const express = require('express');
 const mysql = require('mysql2');
 const app = express();
+const cors = require('cors');
 const port = 3000;
+
+app.use(cors());
 
 // Create a connection to the database
 const connection = mysql.createConnection({
@@ -36,8 +39,10 @@ app.get('/', (req, res) => {
       res.status(500).send('Internal Server Error');
       return;
     }
-   
+
+    //console.log('Query executed successfully:', results);
     res.json(results);
+    
   });
 });
 

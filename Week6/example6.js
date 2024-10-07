@@ -1,5 +1,6 @@
 const readline = require('readline');
 
+//sets up an interface for reading input from the command line in a Node.js environment
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -30,6 +31,8 @@ const askQuestion = () => {
     if (currentQuestion < questions.length) {
         const q = questions[currentQuestion];
         console.log(q.question);
+
+        //The forEach() method in Node.js is used to iterate over the elements of an array, executing a provided function once for each element. 
         q.options.forEach(option => console.log(option));
         rl.question('Your answer: ', (answer) => {
             if (parseInt(answer, 10) === q.answer) {
