@@ -1,0 +1,344 @@
+[
+    {
+      "first_name": "John",
+      "last_name": "Doe",
+      "player_number": 1,
+      "team": {
+        "team_name": "Warriors",
+        "location": "San Francisco"
+      }
+    },
+    {
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "player_number": 2,
+      "team": {
+        "team_name": "Lakers",
+        "location": "Los Angeles"
+      }
+    },
+    {
+      "first_name": "Michael",
+      "last_name": "Johnson",
+      "player_number": 3,
+      "team": {
+        "team_name": "Bulls",
+        "location": "Chicago"
+      }
+    },
+    {
+      "first_name": "Emily",
+      "last_name": "Davis",
+      "player_number": 4,
+      "team": {
+        "team_name": "Celtics",
+        "location": "Boston"
+      }
+    },
+    {
+      "first_name": "Chris",
+      "last_name": "Brown",
+      "player_number": 5,
+      "team": {
+        "team_name": "Knicks",
+        "location": "New York"
+      }
+    },
+    {
+      "first_name": "Jessica",
+      "last_name": "Wilson",
+      "player_number": 6,
+      "team": {
+        "team_name": "Heat",
+        "location": "Miami"
+      }
+    },
+    {
+      "first_name": "David",
+      "last_name": "Martinez",
+      "player_number": 7,
+      "team": {
+        "team_name": "Spurs",
+        "location": "San Antonio"
+      }
+    },
+    {
+      "first_name": "Sarah",
+      "last_name": "Anderson",
+      "player_number": 8,
+      "team": {
+        "team_name": "Raptors",
+        "location": "Toronto"
+      }
+    },
+    {
+      "first_name": "James",
+      "last_name": "Taylor",
+      "player_number": 9,
+      "team": {
+        "team_name": "Mavericks",
+        "location": "Dallas"
+      }
+    },
+    {
+      "first_name": "Laura",
+      "last_name": "Thomas",
+      "player_number": 10,
+      "team": {
+        "team_name": "Nuggets",
+        "location": "Denver"
+      }
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Moore",
+      "player_number": 11,
+      "team": {
+        "team_name": "Warriors",
+        "location": "San Francisco"
+      }
+    },
+    {
+      "first_name": "Sophia",
+      "last_name": "Jackson",
+      "player_number": 12,
+      "team": {
+        "team_name": "Lakers",
+        "location": "Los Angeles"
+      }
+    },
+    {
+      "first_name": "Matthew",
+      "last_name": "White",
+      "player_number": 13,
+      "team": {
+        "team_name": "Bulls",
+        "location": "Chicago"
+      }
+    },
+    {
+      "first_name": "Olivia",
+      "last_name": "Harris",
+      "player_number": 14,
+      "team": {
+        "team_name": "Celtics",
+        "location": "Boston"
+      }
+    },
+    {
+      "first_name": "Joshua",
+      "last_name": "Martin",
+      "player_number": 15,
+      "team": {
+        "team_name": "Knicks",
+        "location": "New York"
+      }
+    },
+    {
+      "first_name": "Isabella",
+      "last_name": "Thompson",
+      "player_number": 16,
+      "team": {
+        "team_name": "Heat",
+        "location": "Miami"
+      }
+    },
+    {
+      "first_name": "Andrew",
+      "last_name": "Garcia",
+      "player_number": 17,
+      "team": {
+        "team_name": "Spurs",
+        "location": "San Antonio"
+      }
+    },
+    {
+      "first_name": "Mia",
+      "last_name": "Martinez",
+      "player_number": 18,
+      "team": {
+        "team_name": "Raptors",
+        "location": "Toronto"
+      }
+    },
+    {
+      "first_name": "Joseph",
+      "last_name": "Robinson",
+      "player_number": 19,
+      "team": {
+        "team_name": "Mavericks",
+        "location": "Dallas"
+      }
+    },
+    {
+      "first_name": "Ava",
+      "last_name": "Clark",
+      "player_number": 20,
+      "team": {
+        "team_name": "Nuggets",
+        "location": "Denver"
+      }
+    },
+    {
+      "first_name": "Ethan",
+      "last_name": "Rodriguez",
+      "player_number": 21,
+      "team": {
+        "team_name": "Warriors",
+        "location": "San Francisco"
+      }
+    },
+    {
+      "first_name": "Abigail",
+      "last_name": "Lewis",
+      "player_number": 22,
+      "team": {
+        "team_name": "Lakers",
+        "location": "Los Angeles"
+      }
+    },
+    {
+      "first_name": "Alexander",
+      "last_name": "Lee",
+      "player_number": 23,
+      "team": {
+        "team_name": "Bulls",
+        "location": "Chicago"
+      }
+    },
+    {
+      "first_name": "Charlotte",
+      "last_name": "Walker",
+      "player_number": 24,
+      "team": {
+        "team_name": "Celtics",
+        "location": "Boston"
+      }
+    },
+    {
+      "first_name": "William",
+      "last_name": "Hall",
+      "player_number": 25,
+      "team": {
+        "team_name": "Knicks",
+        "location": "New York"
+      }
+    },
+    {
+      "first_name": "Amelia",
+      "last_name": "Allen",
+      "player_number": 26,
+      "team": {
+        "team_name": "Heat",
+        "location": "Miami"
+      }
+    },
+    {
+      "first_name": "James",
+      "last_name": "Young",
+      "player_number": 27,
+      "team": {
+        "team_name": "Spurs",
+        "location": "San Antonio"
+      }
+    },
+    {
+      "first_name": "Harper",
+      "last_name": "Hernandez",
+      "player_number": 28,
+      "team": {
+        "team_name": "Raptors",
+        "location": "Toronto"
+      }
+    },
+    {
+      "first_name": "Benjamin",
+      "last_name": "King",
+      "player_number": 29,
+      "team": {
+        "team_name": "Mavericks",
+        "location": "Dallas"
+      }
+    },
+    {
+      "first_name": "Evelyn",
+      "last_name": "Wright",
+      "player_number": 30,
+      "team": {
+        "team_name": "Nuggets",
+        "location": "Denver"
+      }
+    },
+    {
+      "first_name": "Lucas",
+      "last_name": "Lopez",
+      "player_number": 31,
+      "team": {
+        "team_name": "Warriors",
+        "location": "San Francisco"
+      }
+    },
+    {
+      "first_name": "Ella",
+      "last_name": "Hill",
+      "player_number": 32,
+      "team": {
+        "team_name": "Lakers",
+        "location": "Los Angeles"
+      }
+    },
+    {
+      "first_name": "Henry",
+      "last_name": "Scott",
+      "player_number": 33,
+      "team": {
+        "team_name": "Bulls",
+        "location": "Chicago"
+      }
+    },
+    {
+      "first_name": "Grace",
+      "last_name": "Green",
+      "player_number": 34,
+      "team": {
+        "team_name": "Celtics",
+        "location": "Boston"
+      }
+    },
+    {
+      "first_name": "Samuel",
+      "last_name": "Adams",
+      "player_number": 35,
+      "team": {
+        "team_name": "Knicks",
+        "location": "New York"
+      }
+    },
+    {
+      "first_name": "Victoria",
+      "last_name": "Nelson",
+      "player_number": 36,
+      "team": {
+        "team_name": "Heat",
+        "location": "Miami"
+      }
+    },
+    {
+      "first_name": "Jack",
+      "last_name": "Baker",
+      "player_number": 37,
+      "team": {
+        "team_name": "Spurs",
+        "location": "San Antonio"
+      }
+    },
+    {
+      "first_name": "Lily",
+      "last_name": "Gonzalez",
+      "player_number": 38,
+      "team": {
+        "team_name": "Raptors",
+        "location": "Toronto"
+      }
+    }
+]

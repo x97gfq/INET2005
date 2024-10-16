@@ -1,0 +1,53 @@
+[
+    {
+      "_id": { "$oid": "652d1f1f1f1f1f1f1f1f1f1f" },
+      "team_name": "Warriors",
+      "location": "San Francisco"
+    },
+    {
+      "_id": { "$oid": "652d1f2f2f2f2f2f2f2f2f2f" },
+      "team_name": "Lakers",
+      "location": "Los Angeles"
+    },
+    {
+      "_id": { "$oid": "652d1f3f3f3f3f3f3f3f3f3f" },
+      "team_name": "Bulls",
+      "location": "Chicago"
+    },
+    {
+      "_id": { "$oid": "652d1f4f4f4f4f4f4f4f4f4f" },
+      "team_name": "Celtics",
+      "location": "Boston"
+    },
+    {
+      "_id": { "$oid": "652d1f5f5f5f5f5f5f5f5f5f" },
+      "team_name": "Knicks",
+      "location": "New York"
+    },
+    {
+      "_id": { "$oid": "652d1f6f6f6f6f6f6f6f6f6f" },
+      "team_name": "Heat",
+      "location": "Miami"
+    },
+    {
+      "_id": { "$oid": "652d1f7f7f7f7f7f7f7f7f7f" },
+      "team_name": "Spurs",
+      "location": "San Antonio"
+    },
+    {
+      "_id": { "$oid": "652d1f8f8f8f8f8f8f8f8f8f" },
+      "team_name": "Raptors",
+      "location": "Toronto"
+    },
+    {
+      "_id": { "$oid": "652d1f9f9f9f9f9f9f9f9f9f" },
+      "team_name": "Mavericks",
+      "location": "Dallas"
+    },
+    {
+      "_id": { "$oid": "652d1fafafafafafafafafaf" },
+      "team_name": "Nuggets",
+      "location": "Denver"
+    }
+  ]
+  
