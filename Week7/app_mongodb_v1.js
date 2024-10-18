@@ -4,55 +4,34 @@ const app = express();
 const port = 3000;
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/sport', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => {
-  console.log('Connected to the MongoDB database.');
-}).catch(err => {
-  console.error('Error connecting to the database:', err);
-});
+mongoose.connect('mongodb://172.16.0.118:27017/sports_v1', {}).then(() => {
+    console.log('Connected to the MongoDB database.');
+  }).catch(err => {
+    console.error('Error connecting to the database:', err);
+  })
+;
 
 // Define Mongoose schemas and models
 const playerSchema = new mongoose.Schema({
   first_name: String,
   last_name: String,
   player_number: Number,
-  team_id: mongoose.Schema.Types.ObjectId
+  team: {
+    team_name: String,
+    location: String
+  }
 });
 
-const teamSchema = new mongoose.Schema({
-  team_name: String,
-  location: String
-});
 
-const Player = mongoose.model('Player', playerSchema);
-const Team = mongoose.model('Team', teamSchema);
+// Create the model
+const Player = mongoose.model('Player', playerSchema, 'players_and_teams');
 
 // Define a route to retrieve and display the data
 app.get('/', async (req, res) => {
   console.log('Received request to /');
   try {
-    const players = await Player.aggregate([
-      {
-        $lookup: {
-          from: 'teams',
-          localField: 'team_id',
-          foreignField: '_id',
-          as: 'team_info'
-        }
-      },
-      { $unwind: '$team_info' },
-      {
-        $project: {
-          first_name: 1,
-          last_name: 1,
-          player_number: 1,
-          'team_info.team_name': 1,
-          'team_info.location': 1
-        }
-      }
-    ]);
+
+    const players = await Player.find();
 
     // Generate HTML output
     let html = `
@@ -86,8 +65,8 @@ app.get('/', async (req, res) => {
           <td>${row.first_name}</td>
           <td>${row.last_name}</td>
           <td>${row.player_number}</td>
-          <td>${row.team_info.team_name}</td>
-          <td>${row.team_info.location}</td>
+          <td>${row.team.team_name}</td>
+          <td>${row.team.location}</td>
           </tr>
       `;
     });
