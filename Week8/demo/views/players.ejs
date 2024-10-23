@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <h1>My Site</h1>
+    </nav>
+    <div class="container">
+        <h1 class="mt-5">Player and Team Data</h1>
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Player Number</th>
+                    <th>Team Name</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% players.forEach(function(player) { %>
+                    <tr>
+                        <td><%= player.first_name %></td>
+                        <td><%= player.last_name %></td>
+                        <td><%= player.player_number %></td>
+                        <td><%= player.team.team_name %></td>
+                        <td><%= player.team.location %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+    </body>
+    </html>
+    
