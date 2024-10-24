@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.io Notifications</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Socket.io Notifications</h1>
+        <div id="alerts"></div>
+    </div>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
+    <script>
+        const socket = io('http://localhost:3000');
+
+        socket.on('connect', () => {
+            console.log('Connected to server');
+        });
+
+        socket.on('notification', (msg) => {
+            console.log('Notification:', msg);
+            const alertDiv = document.createElement('div');
+            alertDiv.className = 'alert alert-info';
+            alertDiv.role = 'alert';
+            alertDiv.innerText = msg;
+            document.getElementById('alerts').appendChild(alertDiv);
+        });
+    </script>
+</body>
+</html>
