@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 app.get('/portfolio', (req, res) => {
     res.render('portfolio', {
         name: 'John Doe',
-        projects: ['Project 1', 'Project 2', 'Project 3']
+        projects: ['Project 1', 'Project 2', 'Project 3', 'Project 4']
     });
 });
 

@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="container">
+        <%- include('header') %>
         <%- include('navigation') %>
         <h1 class="mt-5">Portfolio of <%= name %></h1>
         <ul>
@@ -15,6 +16,7 @@
                 <li><%= project %></li>
             <% }); %>
         </ul>
+        <%- include('footer') %>
     </div>
 </body>
 </html>
