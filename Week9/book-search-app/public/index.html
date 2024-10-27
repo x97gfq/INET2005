@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Search</title>
+    <script>
+        function validateForm() {
+            const searchQuery = document.forms["searchForm"]["searchQuery"].value;
+            if (searchQuery == "") {
+                alert("Search query must be filled out");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Search for a Book</h1>
+    <form name="searchForm" action="/search" method="post" onsubmit="return validateForm()">
+        <input type="text" name="searchQuery" placeholder="Enter title, author, or genre">
+        <button type="submit">Search</button>
+    </form>
+    <div id="results"></div>
+    <script>
+        document.forms["searchForm"].onsubmit = async function(event) {
+            event.preventDefault();
+            if (!validateForm()) return;
+
+            const formData = new FormData(this);
+            const searchQuery = formData.get("searchQuery");
+
+            const response = await fetch('/search', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams({ searchQuery })
+            });
+
+            const results = await response.json();
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = results.map(book => `<p>${book.title} by ${book.author} (${book.genre})</p>`).join('');
+        }
+    </script>
+</body>
+</html>

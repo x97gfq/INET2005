@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Review Form</title>
+    <script>
+        function validateForm() {
+            const title = document.forms["reviewForm"]["title"].value;
+            const developer = document.forms["reviewForm"]["developer"].value;
+            const genre = document.forms["reviewForm"]["genre"].value;
+            const review = document.forms["reviewForm"]["review"].value;
+            if (title == "" || developer == "" || genre == "" || review == "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Submit a Game Review</h1>
+    <form name="reviewForm" action="/submit-review" method="post" onsubmit="return validateForm()">
+        <input type="text" name="title" placeholder="Game Title"><br>
+        <input type="text" name="developer" placeholder="Developer"><br>
+        <input type="text" name="genre" placeholder="Genre"><br>
+        <textarea name="review" placeholder="Write your review here..."></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
