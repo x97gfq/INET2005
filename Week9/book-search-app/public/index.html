@@ -40,7 +40,8 @@
 
             const results = await response.json();
             const resultsDiv = document.getElementById('results');
-            resultsDiv.innerHTML = results.map(book => `<p>${book.title} by ${book.author} (${book.genre})</p>`).join('');
+            resultsDiv.innerHTML = results.map(book => 
+                `<p>${book.title} by ${book.author} (${book.genre})</p>`).join('');
         }
     </script>
 </body>

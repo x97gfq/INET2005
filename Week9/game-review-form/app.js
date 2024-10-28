@@ -19,7 +19,8 @@ app.post('/submit-review', [
 ], (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
+
+        res.send(errors.errors[0].msg);
     }
     res.send('Review submitted successfully!');
 });

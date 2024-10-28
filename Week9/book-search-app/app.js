@@ -18,6 +18,8 @@ app.get('/', (req, res) => {
 });
 
 app.post('/search', (req, res) => {
+    //The regular expression [^a-zA-Z0-9 ] matches any character that is not a lowercase letter (a-z), 
+    //uppercase letter (A-Z), digit (0-9), or space ( ).
     const searchQuery = req.body.searchQuery;
     const sanitizedQuery = searchQuery.replace(/[^a-zA-Z0-9 ]/g, ''); // Basic sanitization
     const results = books.filter(book => 
