@@ -1,0 +1,17 @@
+{
+  "name": "encryption-demo",
+  "version": "1.0.0",
+  "main": "encryption.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "encryption-demo": "file:",
+    "mongodb": "^6.10.0"
+  },
+  "description": ""
+}

@@ -1,0 +1,16 @@
+{
+  "name": "encryption-demo-0",
+  "version": "1.0.0",
+  "main": "caesar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "encryption-demo-0": "file:",
+    "encryption-dmeo-0": "file:"
+  }
+}

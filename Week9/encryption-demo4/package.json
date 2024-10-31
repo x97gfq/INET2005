@@ -1,0 +1,16 @@
+{
+  "name": "encryption-demo4",
+  "version": "1.0.0",
+  "main": "generate-rsa-keys.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "fs": "^0.0.1-security"
+  }
+}
