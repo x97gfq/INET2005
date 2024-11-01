@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT with Node.js</title>
+</head>
+<body>
+  <h1>Chat with ChatGPT</h1>
+  <form id="chat-form">
+    <textarea id="prompt" rows="4" cols="50" placeholder="Type your prompt here..."></textarea><br>
+    <button type="submit">Submit</button>
+  </form>
+  <h2>Response:</h2>
+  <div id="response"></div>
+
+  <script>
+    document.getElementById('chat-form').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const prompt = document.getElementById('prompt').value;
+
+      const response = await fetch('http://localhost:3000/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ prompt }),
+      });
+
+      const data = await response.text();
+      document.getElementById('response').innerText = data;
+    });
+  </script>
+</body>
+</html>
