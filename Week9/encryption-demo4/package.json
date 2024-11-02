@@ -11,6 +11,7 @@
   "description": "",
   "dependencies": {
     "crypto": "^1.0.1",
+    "encryption-demo4": "file:",
     "fs": "^0.0.1-security"
   }
 }
