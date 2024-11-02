@@ -10,8 +10,8 @@
             const developer = document.forms["reviewForm"]["developer"].value;
             const genre = document.forms["reviewForm"]["genre"].value;
             const review = document.forms["reviewForm"]["review"].value;
-            if (title == "" || developer == "" || genre == "" || review == "") {
-                alert("All fields must be filled out");
+            if (title == "" || developer == "" || genre == "" || (review == "" || review.length < 20)) {
+                alert("All fields must be filled out and the review must be at least 20 characters");
                 return false;
             }
             return true;
