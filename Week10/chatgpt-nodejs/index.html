@@ -14,22 +14,6 @@
   <h2>Response:</h2>
   <div id="response"></div>
 
-  <script>
-    document.getElementById('chat-form').addEventListener('submit', async (event) => {
-      event.preventDefault();
-      const prompt = document.getElementById('prompt').value;
-
-      const response = await fetch('http://localhost:3000/chat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ prompt }),
-      });
-
-      const data = await response.text();
-      document.getElementById('response').innerText = data;
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

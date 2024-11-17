@@ -3,11 +3,15 @@ const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const axios = require('axios');
 const cors = require('cors');
+const path = require('path');
 
 dotenv.config(); // Load environment variables from .env file
 
 const app = express();
 const port = 3000;
+
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(cors()); // Enable CORS for all routes
 app.use(bodyParser.json());
