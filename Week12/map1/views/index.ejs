@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Map</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="/js/map.js"></script>
+</head>
+<body>
+    <h1>Hospital Map</h1>
+    <div id="map" style="height: 500px; width: 100%;"></div>
+    <script>
+        const hospitals = <%- JSON.stringify(hospitals) %>;
+    </script>
+</body>
+</html>
